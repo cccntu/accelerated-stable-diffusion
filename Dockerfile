@@ -17,7 +17,7 @@ WORKDIR /tmp
 # an older version of xformer with slightly different API
 RUN pip install git+https://github.com/facebookresearch/xformers@51dd119 --verbose
 # clip model using memory efficient attention
-RUN	pip install transformers git+https://github.com/cccntu/transformers@33c59f3016 --verbose && \
+RUN	pip install git+https://github.com/cccntu/transformers@33c59f3016 --verbose && \
   pip install ftfy scipy
 # stable diffusion using memory efficient attention + fp16 without autocast
 RUN  pip install git+https://github.com/cccntu/diffusers@ef35f234 --verbose
